@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium Hajj and Umrah travel agency offering sacred pilgrimage packages, flight bookings, and complete travel solutions for pilgrims from Bangladesh.">
+    <meta name="keywords" content="Hajj, Umrah, pilgrimage, travel agency, Bangladesh, Makkah, Madinah, flight booking, Hajj packages, Umrah packages">
+    <meta name="author" content="Noor Al-Iman Travels">
+    <title>Noor Al-Iman Travels | Premium Hajj & Umrah Services</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;1,14..32,400&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ==================== HEADER & NAVIGATION ==================== -->
+    <header class="site-header" id="siteHeader" role="banner">
+        <div class="container navbar">
+            <!-- Logo -->
+            <a href="#" class="navbar__logo" aria-label="Noor Al-Iman Travels Home">
+                <span class="navbar__logo-icon">🕋</span>
+                <span data-lang-en="Noor Al-Iman" data-lang-bn="নূর আল-ঈমান">Noor Al-Iman</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="navbar__nav" id="navbarNav" role="navigation" aria-label="Main navigation">
+                <a href="#home" class="active" data-lang-en="Home" data-lang-bn="হোম">Home</a>
+                <a href="#about" data-lang-en="About Us" data-lang-bn="আমাদের সম্পর্কে">About Us</a>
+                <a href="#packages" data-lang-en="Packages" data-lang-bn="প্যাকেজসমূহ">Packages</a>
+                <a href="#flights" data-lang-en="Book Flight" data-lang-bn="ফ্লাইট বুক">Book Flight</a>
+                <a href="#contact" data-lang-en="Contact" data-lang-bn="যোগাযোগ">Contact</a>
+            </nav>
+
+            <!-- Language Switcher + Mobile Toggle -->
+            <div style="display:flex;align-items:center;gap:0.5rem;">
+                <div class="lang-switcher" id="langSwitcher" role="radiogroup" aria-label="Language selector" tabindex="0">
+                    <button class="lang-switcher__option active" data-lang="en" aria-pressed="true">English</button>
+                    <button class="lang-switcher__option" data-lang="bn" aria-pressed="false">বাংলা</button>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main id="home">
+        <!-- ==================== HERO SECTION ==================== -->
+        <section class="hero" aria-labelledby="heroTitle">
+            <div class="hero__bg">
+                <img
+                src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=1600&q=85"
+                alt="Masjid al-Haram in Makkah at dusk with pilgrims"
+                loading="eager"
+                >
+            </div>
+            <div class="hero__overlay"></div>
+            <div class="hero__content container">
+                <span class="hero__badge" data-lang-en="Trusted Since 2008 · Licensed Agency" data-lang-bn="২০০৮ সাল থেকে বিশ্বস্ত · লাইসেন্সপ্রাপ্ত">Trusted Since 2008 · Licensed Agency</span>
+                <h1 id="heroTitle" data-lang-en="Your Sacred Journey Begins With Trust" data-lang-bn="আপনার পবিত্র সফর শুরু হোক বিশ্বস্ততার সাথে">
+                    Your Sacred Journey Begins With Trust
+                </h1>
+                <p class="hero__subtitle" data-lang-en="Experience a spiritually fulfilling Hajj & Umrah with Bangladesh's most reliable travel partner. We handle every detail — so you can focus on your Ibadah."
+                data-lang-bn="বাংলাদেশের সবচেয়ে নির্ভরযোগ্য ভ্রমণ অংশীদারের সাথে হজ্জ ও উমরাহর আধ্যাত্মিক পরিপূর্ণতা অনুভব করুন। আমরা প্রতিটি বিষয়ের যত্ন নিই — যাতে আপনি আপনার ইবাদতে মনোনিবেশ করতে পারেন।">
+                Experience a spiritually fulfilling Hajj & Umrah with Bangladesh's most reliable travel partner. We handle every detail — so you can focus on your Ibadah.
+            </p>
+            <div class="hero__actions">
+                <a href="#packages" class="btn btn-primary btn-lg" data-lang-en="View Packages" data-lang-bn="প্যাকেজ দেখুন">View Packages</a>
+                <a href="#flights" class="btn btn-outline btn-lg" data-lang-en="Book Flight" data-lang-bn="ফ্লাইট বুক করুন">Book Flight</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT US SECTION ==================== -->
+    <section class="about section-padding" id="about" aria-labelledby="aboutTitle">
+        <div class="container about__grid">
+            <div class="about__image-wrapper">
+                <img
+                src="https://images.unsplash.com/photo-1584286595398-a595d32cf15b?w=700&q=80"
+                alt="Elegant mosque architecture with intricate geometric patterns"
+                loading="lazy"
+                >
+                <div class="about__pattern-overlay"></div>
+            </div>
+            <div class="about__content">
+                <span class="section-label" data-lang-en="About Our Agency" data-lang-bn="আমাদের সংস্থা সম্পর্কে">About Our Agency</span>
+                <h2 id="aboutTitle" data-lang-en="Guiding Pilgrims With Sincerity & Excellence" data-lang-bn="আন্তরিকতা ও উৎকর্ষতার সাথে pilgrims দের পথ দেখানো">
+                    Guiding Pilgrims With Sincerity & Excellence
+                </h2>
+                <p data-lang-en="Noor Al-Iman Travels is a government-licensed Hajj & Umrah agency with over 16 years of dedicated service to the Bangladeshi Muslim community. We have proudly assisted more than 12,000 pilgrims in completing their sacred journeys with comfort, dignity, and spiritual focus."
+                data-lang-bn="নূর আল-ঈমান ট্রাভেলস একটি সরকার-অনুমোদিত হজ্জ ও উমরাহ এজেন্সি, যা বাংলাদেশী মুসলিম সম্প্রদায়ের জন্য ১৬ বছরেরও বেশি সময় ধরে নিবেদিত সেবা প্রদান করে আসছে। আমরা ১২,০০০-এরও বেশি pilgrims কে তাদের পবিত্র সফর আরাম, মর্যাদা ও আধ্যাত্মিক মনোযোগ সহকারে সম্পন্ন করতে গর্বিতভাবে সহায়তা করেছি।">
+                Noor Al-Iman Travels is a government-licensed Hajj & Umrah agency with over 16 years of dedicated service to the Bangladeshi Muslim community. We have proudly assisted more than <strong>12,000 pilgrims</strong> in completing their sacred journeys with comfort, dignity, and spiritual focus.
+            </p>
+            <p data-lang-en="From visa processing and premium accommodations near the Haramain to guided Ziyarah tours and 24/7 on-ground support in Saudi Arabia, our comprehensive services ensure a worry-free pilgrimage experience."
+            data-lang-bn="ভিসা প্রক্রিয়াকরণ এবং হারামাইন-এর নিকটবর্তী প্রিমিয়াম আবাসন থেকে শুরু করে গাইডেড জিয়ারাহ ট্যুর এবং সৌদি আরবে ২৪/৭ অন-গ্রাউন্ড সাপোর্ট পর্যন্ত, আমাদের বিস্তৃত পরিষেবা একটি চিন্তামুক্ত pilgrimage অভিজ্ঞতা নিশ্চিত করে।">
+            From visa processing and premium accommodations near the Haramain to guided Ziyarah tours and 24/7 on-ground support in Saudi Arabia, our comprehensive services ensure a worry-free pilgrimage experience.
+        </p>
+        <div class="about__badges">
+            <span class="about__badge"><span class="icon-dot"></span> Govt. Licensed (HAAB)</span>
+            <span class="about__badge"><span class="icon-dot"></span> IATA Certified</span>
+            <span class="about__badge"><span class="icon-dot"></span> 16+ Years Exp.</span>
+            <span class="about__badge"><span class="icon-dot"></span> 12,000+ Pilgrims</span>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- ==================== PACKAGES SECTION ==================== -->
+<section class="packages section-padding" id="packages" aria-labelledby="packagesTitle">
+    <div class="container">
+        <div class="packages__header">
+            <span class="section-label" data-lang-en="Sacred Journeys" data-lang-bn="পবিত্র সফর">Sacred Journeys</span>
+            <h2 id="packagesTitle" data-lang-en="Our Sacred Packages" data-lang-bn="আমাদের পবিত্র প্যাকেজসমূহ">Our Sacred Packages</h2>
+            <p data-lang-en="Choose from our carefully curated Hajj and Umrah packages, designed to suit every budget while maintaining the highest standards of comfort and spiritual guidance."
+            data-lang-bn="আমাদের সতর্কতার সাথে তৈরি হজ্জ ও উমরাহ প্যাকেজ থেকে বেছে নিন, যা প্রতিটি বাজেটের জন্য উপযোগী এবং সর্বোচ্চ আরাম ও আধ্যাত্মিক দিকনির্দেশনার মান বজায় রাখে।">
+            Choose from our carefully curated Hajj and Umrah packages, designed to suit every budget while maintaining the highest standards of comfort and spiritual guidance.
+        </p>
+    </div>
+
+    <div class="package-tabs" role="tablist" aria-label="Package categories">
+        <button class="package-tab active" role="tab" aria-selected="true" data-tab="hajj" id="tabHajj">
+            🕋 Hajj Packages
+        </button>
+        <button class="package-tab" role="tab" aria-selected="false" data-tab="umrah" id="tabUmrah">
+            🕌 Umrah Packages
+        </button>
+    </div>
+
+    <!-- Hajj Package Grid -->
+    <div class="package-grid" id="hajjGrid" role="tabpanel" aria-labelledby="tabHajj">
+        <!-- Hajj Card 1 -->
+        <article class="package-card">
+            <div class="package-card__image">
+                <img src="https://images.unsplash.com/photo-1565552645632-d725f8bfc19a?w=600&q=75" alt="Kaaba at prayer time" loading="lazy">
+                <span class="package-card__badge">Popular</span>
+            </div>
+            <div class="package-card__body">
+                <h3 class="package-card__title">Economy Hajj 2026</h3>
+                <ul class="package-card__features">
+                    <li><span class="feat-icon">✓</span> Hotel within 800m of Haram</li>
+                    <li><span class="feat-icon">✓</span> Buffet catering (3 meals/day)</li>
+                    <li><span class="feat-icon">✓</span> Group guide & scholar</li>
+                    <li><span class="feat-icon">✓</span> Shared transport</li>
+                    <li><span class="feat-icon">✓</span> Visa processing included</li>
+                </ul>
+                <div class="package-card__footer">
+                    <span class="package-card__price">৳ 4,85,000 <small>/ person</small></span>
+                    <a href="#" class="btn btn-primary btn-sm">Book Now</a>
+                </div>
+            </div>
+        </article>
+        <!-- Hajj Card 2 -->
+        <article class="package-card">
+            <div class="package-card__image">
+                <img src="https://images.unsplash.com/photo-1542816417-82b7b4c3c8b4?w=600&q=75" alt="Pilgrims at Mina tents" loading="lazy">
+            </div>
+            <div class="package-card__body">
+                <h3 class="package-card__title">Standard Hajj 2026</h3>
+                <ul class="package-card__features">
+                    <li><span class="feat-icon">✓</span> Hotel within 500m of Haram</li>
+                    <li><span class="feat-icon">✓</span> Premium catering</li>
+                    <li><span class="feat-icon">✓</span> Dedicated group scholar</li>
+                    <li><span class="feat-icon">✓</span> Private AC transport</li>
+                    <li><span class="feat-icon">✓</span> Express visa processing</li>
+                </ul>
+                <div class="package-card__footer">
+                    <span class="package-card__price">৳ 6,25,000 <small>/ person</small></span>
+                    <a href="#" class="btn btn-primary btn-sm">Book Now</a>
+                </div>
+            </div>
+        </article>
+        <!-- Hajj Card 3 -->
+        <article class="package-card">
+            <div class="package-card__image">
+                <img src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=600&q=75" alt="Masjid al-Haram courtyard" loading="lazy">
+                <span class="package-card__badge">Premium</span>
+            </div>
+            <div class="package-card__body">
+                <h3 class="package-card__title">Premium Hajj 2026</h3>
+                <ul class="package-card__features">
+                    <li><span class="feat-icon">✓</span> 5★ hotel facing Haram</li>
+                    <li><span class="feat-icon">✓</span> Gourmet dining</li>
+                    <li><span class="feat-icon">✓</span> Private scholar & guide</li>
+                    <li><span class="feat-icon">✓</span> Luxury SUV transport</li>
+                    <li><span class="feat-icon">✓</span> VIP lounge access</li>
+                </ul>
+                <div class="package-card__footer">
+                    <span class="package-card__price">৳ 9,80,000 <small>/ person</small></span>
+                    <a href="#" class="btn btn-primary btn-sm">Book Now</a>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <!-- Umrah Package Grid (hidden by default) -->
+    <div class="package-grid hidden" id="umrahGrid" role="tabpanel" aria-labelledby="tabUmrah">
+        <!-- Umrah Card 1 -->
+        <article class="package-card">
+            <div class="package-card__image">
+                <img src="https://images.unsplash.com/photo-1584286595398-a595d32cf15b?w=600&q=75" alt="Madinah mosque at sunset" loading="lazy">
+                <span class="package-card__badge">Best Value</span>
+            </div>
+            <div class="package-card__body">
+                <h3 class="package-card__title">Economy Umrah</h3>
+                <ul class="package-card__features">
+                    <li><span class="feat-icon">✓</span> 10 days / 9 nights</li>
+                    <li><span class="feat-icon">✓</span> Hotel within 600m of Haram</li>
+                    <li><span class="feat-icon">✓</span> Daily breakfast included</li>
+                    <li><span class="feat-icon">✓</span> Ziyarah tours included</li>
+                    <li><span class="feat-icon">✓</span> Visa processing</li>
+                </ul>
+                <div class="package-card__footer">
+                    <span class="package-card__price">৳ 1,45,000 <small>/ person</small></span>
+                    <a href="#" class="btn btn-primary btn-sm">Book Now</a>
+                </div>
+            </div>
+        </article>
+        <!-- Umrah Card 2 -->
+        <article class="package-card">
+            <div class="package-card__image">
+                <img src="https://images.unsplash.com/photo-1575101261474-5cb565114bb9?w=600&q=75" alt="Pilgrims walking in Madinah" loading="lazy">
+            </div>
+            <div class="package-card__body">
+                <h3 class="package-card__title">Standard Umrah</h3>
+                <ul class="package-card__features">
+                    <li><span class="feat-icon">✓</span> 14 days / 13 nights</li>
+                    <li><span class="feat-icon">✓</span> Hotel within 350m of Haram</li>
+                    <li><span class="feat-icon">✓</span> Half-board catering</li>
+                    <li><span class="feat-icon">✓</span> Guided Ziyarah</li>
+                    <li><span class="feat-icon">✓</span> Express visa</li>
+                </ul>
+                <div class="package-card__footer">
+                    <span class="package-card__price">৳ 2,20,000 <small>/ person</small></span>
+                    <a href="#" class="btn btn-primary btn-sm">Book Now</a>
+                </div>
+            </div>
+        </article>
+        <!-- Umrah Card 3 -->
+        <article class="package-card">
+            <div class="package-card__image">
+                <img src="https://images.unsplash.com/photo-1566438480900-58e7b2e2aec5?w=600&q=75" alt="Luxurious hotel view near Haram" loading="lazy">
+                <span class="package-card__badge">Luxury</span>
+            </div>
+            <div class="package-card__body">
+                <h3 class="package-card__title">Premium Umrah</h3>
+                <ul class="package-card__features">
+                    <li><span class="feat-icon">✓</span> 14 days / 13 nights</li>
+                    <li><span class="feat-icon">✓</span> 5★ Haram-view hotel</li>
+                    <li><span class="feat-icon">✓</span> Full-board gourmet dining</li>
+                    <li><span class="feat-icon">✓</span> Private scholar companion</li>
+                    <li><span class="feat-icon">✓</span> Luxury transfers</li>
+                </ul>
+                <div class="package-card__footer">
+                    <span class="package-card__price">৳ 3,85,000 <small>/ person</small></span>
+                    <a href="#" class="btn btn-primary btn-sm">Book Now</a>
+                </div>
+            </div>
+        </article>
+    </div>
+</div>
+</section>
+
+<!-- ==================== FLIGHT BOOKING SECTION ==================== -->
+<section class="flight-booking section-padding" id="flights" aria-labelledby="flightTitle">
+    <div class="flight-booking__pattern"></div>
+    <div class="container">
+        <div class="flight-booking__header">
+            <h2 id="flightTitle" data-lang-en="Book Your Flight to the Holy Land" data-lang-bn="পবিত্র ভূমিতে আপনার ফ্লাইট বুক করুন">Book Your Flight to the Holy Land</h2>
+            <p data-lang-en="Search and compare the best airfares from Bangladesh to Jeddah & Madinah with our easy-to-use flight booking widget."
+            data-lang-bn="আমাদের সহজ ফ্লাইট বুকিং উইজেটের মাধ্যমে বাংলাদেশ থেকে জেদ্দা ও মদিনার সেরা বিমান ভাড়া অনুসন্ধান ও তুলনা করুন।">
+            Search and compare the best airfares from Bangladesh to Jeddah & Madinah with our easy-to-use flight booking widget.
+        </p>
+    </div>
+    <form class="flight-form" id="flightSearchForm" aria-label="Flight search form">
+        <div class="flight-form__group">
+            <label for="departureFrom">From (Departure)</label>
+            <select id="departureFrom" required>
+                <option value="">Select city</option>
+                <option value="DAC">Dhaka (DAC)</option>
+                <option value="CGP">Chattogram (CGP)</option>
+                <option value="ZYL">Sylhet (ZYL)</option>
+                <option value="CXB">Cox's Bazar (CXB)</option>
+            </select>
+        </div>
+        <div class="flight-form__group">
+            <label for="arrivalTo">To (Destination)</label>
+            <select id="arrivalTo" required>
+                <option value="">Select city</option>
+                <option value="JED">Jeddah (JED)</option>
+                <option value="MED">Madinah (MED)</option>
+                <option value="RUH">Riyadh (RUH)</option>
+            </select>
+        </div>
+        <div class="flight-form__group">
+            <label for="departDate">Departure Date</label>
+            <input type="date" id="departDate" required min="2026-01-01">
+        </div>
+        <div class="flight-form__group">
+            <label for="returnDate">Return Date</label>
+            <input type="date" id="returnDate" required min="2026-01-05">
+        </div>
+        <div class="flight-form__group">
+            <label for="travelersClass">Travelers & Class</label>
+            <select id="travelersClass" required>
+                <option value="">Select</option>
+                <option value="1-economy">1 Adult · Economy</option>
+                <option value="2-economy">2 Adults · Economy</option>
+                <option value="1-business">1 Adult · Business</option>
+                <option value="2-business">2 Adults · Business</option>
+                <option value="family-economy">Family (4+) · Economy</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg">
+            ✈ Search Flights
+        </button>
+    </form>
+</div>
+</section>
+</main>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="site-footer" id="contact" role="contentinfo">
+    <div class="container footer__grid">
+        <div class="footer__col">
+            <a href="#" class="navbar__logo" style="margin-bottom:1rem;display:inline-flex;">
+                <span class="navbar__logo-icon">🕋</span>
+                <span style="color:#E2E8E7;" data-lang-en="Noor Al-Iman Travels" data-lang-bn="নূর আল-ঈমান ট্রাভেলস">Noor Al-Iman Travels</span>
+            </a>
+            <p data-lang-en="A trusted name in Hajj & Umrah services since 2008. Licensed by the Ministry of Religious Affairs, Bangladesh (HAAB License No: 1248). We are committed to serving the pilgrims with honesty, care, and spiritual devotion."
+            data-lang-bn="২০০৮ সাল থেকে হজ্জ ও উমরাহ সেবায় একটি বিশ্বস্ত নাম। বাংলাদেশ ধর্ম বিষয়ক মন্ত্রণালয় কর্তৃক লাইসেন্সপ্রাপ্ত (হাব লাইসেন্স নং: ১২৪৮)। আমরা সততা, যত্ন এবং আধ্যাত্মিক নিষ্ঠার সাথে pilgrims দের সেবা করতে প্রতিশ্রুতিবদ্ধ।">
+            A trusted name in Hajj & Umrah services since 2008. Licensed by the Ministry of Religious Affairs, Bangladesh (HAAB License No: 1248). We are committed to serving the pilgrims with honesty, care, and spiritual devotion.
+        </p>
+    </div>
+    <div class="footer__col">
+        <h4 data-lang-en="Quick Links" data-lang-bn="দ্রুত লিঙ্ক">Quick Links</h4>
+        <ul>
+            <li><a href="#home" data-lang-en="Home" data-lang-bn="হোম">Home</a></li>
+            <li><a href="#about" data-lang-en="About Us" data-lang-bn="আমাদের সম্পর্কে">About Us</a></li>
+            <li><a href="#packages" data-lang-en="Hajj Packages" data-lang-bn="হজ্জ প্যাকেজ">Hajj Packages</a></li>
+            <li><a href="#packages" data-lang-en="Umrah Packages" data-lang-bn="উমরাহ প্যাকেজ">Umrah Packages</a></li>
+            <li><a href="#flights" data-lang-en="Book Flight" data-lang-bn="ফ্লাইট বুক">Book Flight</a></li>
+        </ul>
+    </div>
+    <div class="footer__col">
+        <h4 data-lang-en="Contact Us" data-lang-bn="যোগাযোগ">Contact Us</h4>
+        <ul class="footer__contact">
+            <li>
+                <span class="contact-icon">📞</span>
+                <span>+880 1712-345678<br>+880 1918-765432</span>
+            </li>
+            <li>
+                <span class="contact-icon">✉</span>
+                <span>info@nooralimantravels.com</span>
+            </li>
+            <li>
+                <span class="contact-icon">📍</span>
+                <span>42, Motijheel C/A,<br>Dhaka 1000, Bangladesh</span>
+            </li>
+        </ul>
+    </div>
+    <div class="footer__col">
+        <h4 data-lang-en="Follow Us" data-lang-bn="আমাদের অনুসরণ করুন">Follow Us</h4>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook" title="Facebook">FB</a>
+            <a href="#" aria-label="YouTube" title="YouTube">YT</a>
+            <a href="#" aria-label="Instagram" title="Instagram">IG</a>
+            <a href="#" aria-label="WhatsApp" title="WhatsApp">WA</a>
+            <a href="#" aria-label="Telegram" title="Telegram">TG</a>
+        </div>
+    </div>
+</div>
+<div class="footer__bottom">
+    <div class="container">
+        <p>&copy; <span id="copyrightYear">2026</span> Noor Al-Iman Travels.
+            <span data-lang-en=" All rights reserved. Designed with devotion." data-lang-bn=" সর্বস্বত্ব সংরক্ষিত। নিষ্ঠার সাথে ডিজাইন করা।">
+                All rights reserved. Designed with devotion.
+            </span>
+        </p>
+    </div>
+</div>
+</footer>
+
+<!-- External JavaScript -->
+<script src="script.js"></script>
+</body>
+</html>
