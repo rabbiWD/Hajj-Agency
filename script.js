@@ -30,13 +30,15 @@
         mobileMenuToggle.setAttribute('aria-expanded', 'true');
     }
 
-    mobileMenuToggle.addEventListener('click', function() {
-        if (navbarNav.classList.contains('open')) {
-            closeMobileMenu();
-        } else {
-            openMobileMenu();
-        }
-    });
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function() {
+            if (navbarNav.classList.contains('open')) {
+                closeMobileMenu();
+            } else {
+                openMobileMenu();
+            }
+        });
+    }
 
     // Close mobile menu when a nav link is clicked
     allNavLinks.forEach(link => {
@@ -135,15 +137,17 @@
     });
 
     // Keyboard accessibility for language switcher
-    langSwitcher.addEventListener('keydown', function(e) {
-        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
-            e.preventDefault();
-            const newLang = currentLang === 'en' ? 'bn' : 'en';
-            switchLanguage(newLang);
-            const activeBtn = langSwitcher.querySelector(`[data-lang="${newLang}"]`);
-            if (activeBtn) activeBtn.focus();
-        }
-    });
+    if (langSwitcher) {
+        langSwitcher.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+                e.preventDefault();
+                const newLang = currentLang === 'en' ? 'bn' : 'en';
+                switchLanguage(newLang);
+                const activeBtn = langSwitcher.querySelector(`[data-lang="${newLang}"]`);
+                if (activeBtn) activeBtn.focus();
+            }
+        });
+    }
 
     // ==================== PACKAGE TAB SWITCHING ====================
     function switchPackageTab(tabName) {
@@ -203,45 +207,49 @@
     });
 
     // Initialize: Hajj grid visible, Umrah hidden
-    hajjGrid.classList.remove('hidden');
-    umrahGrid.classList.add('hidden');
-    hajjGrid.style.opacity = '1';
-    hajjGrid.style.transform = 'translateY(0)';
+    if (hajjGrid && umrahGrid) {
+        hajjGrid.classList.remove('hidden');
+        umrahGrid.classList.add('hidden');
+        hajjGrid.style.opacity = '1';
+        hajjGrid.style.transform = 'translateY(0)';
+    }
 
     // ==================== FLIGHT SEARCH FORM HANDLER ====================
-    flightSearchForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        const from = document.getElementById('departureFrom').value;
-        const to = document.getElementById('arrivalTo').value;
-        const departDate = document.getElementById('departDate').value;
-        const returnDate = document.getElementById('returnDate').value;
-        const travelersClass = document.getElementById('travelersClass').value;
+    if (flightSearchForm) {
+        flightSearchForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const from = document.getElementById('departureFrom').value;
+            const to = document.getElementById('arrivalTo').value;
+            const departDate = document.getElementById('departDate').value;
+            const returnDate = document.getElementById('returnDate').value;
+            const travelersClass = document.getElementById('travelersClass').value;
 
-        if (!from || !to || !departDate || !returnDate || !travelersClass) {
-            alert(currentLang === 'bn' ?
-                'অনুগ্রহ করে সমস্ত প্রয়োজনীয় ক্ষেত্র পূরণ করুন।' :
-                'Please fill in all required fields.');
-            return;
-        }
+            if (!from || !to || !departDate || !returnDate || !travelersClass) {
+                alert(currentLang === 'bn' ?
+                    'অনুগ্রহ করে সমস্ত প্রয়োজনীয় ক্ষেত্র পূরণ করুন।' :
+                    'Please fill in all required fields.');
+                return;
+            }
 
-        const depart = new Date(departDate);
-        const returnD = new Date(returnDate);
-        if (returnD <= depart) {
-            alert(currentLang === 'bn' ?
-                'ফেরার তারিখ অবশ্যই departure তারিখের পরে হতে হবে।' :
-                'Return date must be after the departure date.');
-            return;
-        }
+            const depart = new Date(departDate);
+            const returnD = new Date(returnDate);
+            if (returnD <= depart) {
+                alert(currentLang === 'bn' ?
+                    'ফেরার তারিখ অবশ্যই departure তারিখের পরে হতে হবে।' :
+                    'Return date must be after the departure date.');
+                return;
+            }
 
-        // Mock search result
-        const message = currentLang === 'bn' ?
-            `ফ্লাইট অনুসন্ধান শুরু হচ্ছে...\n${from} → ${to}\nযাত্রা: ${departDate} | ফেরা: ${returnDate}` :
-            `Searching flights...\n${from} → ${to}\nDepart: ${departDate} | Return: ${returnDate}`;
+            // Mock search result
+            const message = currentLang === 'bn' ?
+                `ফ্লাইট অনুসন্ধান শুরু হচ্ছে...\n${from} → ${to}\nযাত্রা: ${departDate} | ফেরা: ${returnDate}` :
+                `Searching flights...\n${from} → ${to}\nDepart: ${departDate} | Return: ${returnDate}`;
 
-        alert(message + '\n\n' + (currentLang === 'bn' ?
-            '(এটি একটি ডেমো প্রদর্শনী — প্রকৃত বুকিং সিস্টেম শীঘ্রই আসছে)' :
-            '(This is a demo showcase — real booking system coming soon)'));
-    });
+            alert(message + '\n\n' + (currentLang === 'bn' ?
+                '(এটি একটি ডেমো প্রদর্শনী — প্রকৃত বুকিং সিস্টেম শীঘ্রই আসছে)' :
+                '(This is a demo showcase — real booking system coming soon)'));
+        });
+    }
 
     // ==================== SMOOTH SCROLL FOR ANCHOR LINKS ====================
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -300,6 +308,4 @@
     console.log('%c🕋 Noor Al-Iman Travels %cReady',
         'font-weight:bold;color:#0B5345;font-size:1.1rem;',
         'color:#D4AF37;font-weight:bold;');
-    console.log('%cPremium Hajj & Umrah Agency — All systems initialized',
-        'color:#6B7280;font-style:italic;');
 })();
