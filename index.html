@@ -19,6 +19,10 @@
         tailwind.config = {
             theme: {
                 extend: {
+                    screens: {
+                        'xs': '480px',
+                        'xxs': '360px',
+                    },
                     colors: {
                         primary: {
                             DEFAULT: '#0B5345',
@@ -50,12 +54,12 @@
 </head>
 <body class="font-sans bg-[#FAFAF8] text-charcoal antialiased overflow-x-hidden min-h-screen">
     <!-- ==================== HEADER & NAVIGATION ==================== -->
-    <header class="site-header sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm transition-shadow duration-300 h-[72px]" id="siteHeader" role="banner">
-        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between gap-4">
+    <header class="site-header sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm transition-shadow duration-300 h-[64px] sm:h-[72px]" id="siteHeader" role="banner">
+        <div class="max-w-[1280px] mx-auto px-3 sm:px-6 lg:px-8 h-full flex items-center justify-between gap-2 sm:gap-4">
             <!-- Logo -->
-            <a href="#" class="flex items-center gap-3 shrink-0 font-extrabold text-xl text-primary-dark tracking-tight" aria-label="Noor Al-Iman Travels Home">
-                <span class="w-[42px] h-[42px] bg-gradient-to-br from-primary to-primary-dark rounded-xl flex items-center justify-center text-accent text-xl shrink-0 shadow-sm">🕋</span>
-                <span data-lang-en="Noor Al-Iman" data-lang-bn="নূর আল-ঈমান">Noor Al-Iman</span>
+            <a href="#" class="flex items-center gap-2 sm:gap-3 shrink-0 font-extrabold text-base sm:text-xl text-primary-dark tracking-tight" aria-label="Noor Al-Iman Travels Home">
+                <span class="w-8 h-8 sm:w-[42px] sm:h-[42px] bg-gradient-to-br from-primary to-primary-dark rounded-lg sm:rounded-xl flex items-center justify-center text-accent text-base sm:text-xl shrink-0 shadow-sm">🕋</span>
+                <span data-lang-en="Noor Al-Iman" data-lang-bn="নূর আল-ঈমান" class="whitespace-nowrap">Noor Al-Iman</span>
             </a>
 
             <!-- Navigation Links -->
@@ -68,15 +72,15 @@
             </nav>
 
             <!-- Language Switcher + Mobile Toggle -->
-            <div class="flex items-center gap-2">
-                <div class="lang-switcher flex items-center gap-1 bg-gray-100 rounded-full p-1 border border-gray-200 shrink-0 cursor-pointer hover:border-accent hover:ring-2 hover:ring-accent-glow transition-all" id="langSwitcher" role="radiogroup" aria-label="Language selector" tabindex="0">
-                    <button class="lang-switcher__option active px-3.5 py-1.5 rounded-full text-xs font-semibold text-gray-500 transition-all border-none bg-transparent active:bg-white active:text-primary-dark active:shadow-sm" data-lang="en" aria-pressed="true">English</button>
-                    <button class="lang-switcher__option px-3.5 py-1.5 rounded-full text-xs font-semibold text-gray-500 transition-all border-none bg-transparent" data-lang="bn" aria-pressed="false">বাংলা</button>
+            <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+                <div class="lang-switcher flex items-center gap-0.5 sm:gap-1 bg-gray-100 rounded-full p-0.5 sm:p-1 border border-gray-200 shrink-0 cursor-pointer hover:border-accent hover:ring-2 hover:ring-accent-glow transition-all" id="langSwitcher" role="radiogroup" aria-label="Language selector" tabindex="0">
+                    <button class="lang-switcher__option active px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-semibold text-gray-500 transition-all border-none bg-transparent active:bg-white active:text-primary-dark active:shadow-sm" data-lang="en" aria-pressed="true">English</button>
+                    <button class="lang-switcher__option px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-semibold text-gray-500 transition-all border-none bg-transparent" data-lang="bn" aria-pressed="false">বাংলা</button>
                 </div>
-                <button class="mobile-menu-toggle md:hidden flex flex-col gap-1.5 p-2 bg-transparent border-none cursor-pointer z-[1001]" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
-                    <span class="w-6 h-[2.5px] bg-charcoal rounded-sm transition-all duration-300"></span>
-                    <span class="w-6 h-[2.5px] bg-charcoal rounded-sm transition-all duration-300"></span>
-                    <span class="w-6 h-[2.5px] bg-charcoal rounded-sm transition-all duration-300"></span>
+                <button class="mobile-menu-toggle md:hidden flex flex-col gap-1 sm:gap-1.5 p-1.5 sm:p-2 bg-transparent border-none cursor-pointer z-[1001]" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="w-5 sm:w-6 h-[2.5px] bg-charcoal rounded-sm transition-all duration-300"></span>
+                    <span class="w-5 sm:w-6 h-[2.5px] bg-charcoal rounded-sm transition-all duration-300"></span>
+                    <span class="w-5 sm:w-6 h-[2.5px] bg-charcoal rounded-sm transition-all duration-300"></span>
                 </button>
             </div>
         </div>
@@ -85,7 +89,7 @@
     <!-- ==================== MAIN CONTENT ==================== -->
     <main id="home">
         <!-- ==================== HERO SECTION ==================== -->
-        <section class="relative min-h-[85vh] flex items-center justify-center text-center text-white overflow-hidden bg-[#1a1a1a]" aria-labelledby="heroTitle">
+        <section class="relative min-h-[80vh] sm:min-h-[85vh] flex items-center justify-center text-center text-white overflow-hidden bg-[#1a1a1a]" aria-labelledby="heroTitle">
             <div class="absolute inset-0 z-0">
                 <img
                     src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=1600&q=85"
@@ -95,25 +99,25 @@
                 >
             </div>
             <div class="absolute inset-0 bg-gradient-to-b from-[#06281e]/80 via-[#0b352d]/70 to-[#061e16]/90 z-10"></div>
-            <div class="relative z-20 max-w-[800px] mx-auto px-4 py-20 animate-fadeInUp">
-                <span class="inline-block bg-accent/20 border border-accent/40 text-accent-light px-5 py-1.5 rounded-full font-semibold text-xs tracking-wider uppercase mb-6 shadow-sm" data-lang-en="Trusted Since 2008 · Licensed Agency" data-lang-bn="২০০৮ সাল থেকে বিশ্বস্ত · লাইসেন্সপ্রাপ্ত">Trusted Since 2008 · Licensed Agency</span>
-                <h1 id="heroTitle" class="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 tracking-tight drop-shadow-md" data-lang-en="Your Sacred Journey Begins With Trust" data-lang-bn="আপনার পবিত্র সফর শুরু হোক বিশ্বস্ততার সাথে">
+            <div class="relative z-20 max-w-[800px] mx-auto px-3.5 sm:px-4 py-12 sm:py-20 animate-fadeInUp">
+                <span class="inline-block max-w-full bg-accent/20 border border-accent/40 text-accent-light px-3.5 py-1 sm:px-5 sm:py-1.5 rounded-full font-semibold text-[11px] sm:text-xs tracking-wider uppercase mb-4 sm:mb-6 shadow-sm truncate" data-lang-en="Trusted Since 2008 · Licensed Agency" data-lang-bn="২০০৮ সাল থেকে বিশ্বস্ত · লাইসেন্সপ্রাপ্ত">Trusted Since 2008 · Licensed Agency</span>
+                <h1 id="heroTitle" class="text-2xl xs:text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-snug sm:leading-tight mb-4 sm:mb-6 tracking-tight drop-shadow-md" data-lang-en="Your Sacred Journey Begins With Trust" data-lang-bn="আপনার পবিত্র সফর শুরু হোক বিশ্বস্ততার সাথে">
                     Your Sacred Journey Begins With Trust
                 </h1>
-                <p class="text-base sm:text-lg lg:text-xl font-normal leading-relaxed opacity-90 mb-8 max-w-2xl mx-auto" data-lang-en="Experience a spiritually fulfilling Hajj & Umrah with Bangladesh's most reliable travel partner. We handle every detail — so you can focus on your Ibadah."
+                <p class="text-xs xs:text-sm sm:text-lg lg:text-xl font-normal leading-relaxed opacity-90 mb-6 sm:mb-8 max-w-2xl mx-auto px-1" data-lang-en="Experience a spiritually fulfilling Hajj & Umrah with Bangladesh's most reliable travel partner. We handle every detail — so you can focus on your Ibadah."
                 data-lang-bn="বাংলাদেশের সবচেয়ে নির্ভরযোগ্য ভ্রমণ অংশীদারের সাথে হজ্জ ও উমরাহর আধ্যাত্মিক পরিপূর্ণতা অনুভব করুন। আমরা প্রতিটি বিষয়ের যত্ন নিই — যাতে আপনি আপনার ইবাদতে মনোনিবেশ করতে পারেন।">
                     Experience a spiritually fulfilling Hajj & Umrah with Bangladesh's most reliable travel partner. We handle every detail — so you can focus on your Ibadah.
                 </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="#packages" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 bg-gradient-to-r from-accent to-[#C59B2A] text-charcoal font-bold text-base rounded-full shadow-lg hover:from-[#E0BE45] hover:to-accent hover:-translate-y-0.5 hover:shadow-xl active:translate-y-0 transition-all duration-200" data-lang-en="View Packages" data-lang-bn="প্যাকেজ দেখুন">View Packages</a>
-                    <a href="#flights" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 bg-transparent border-2 border-white text-white font-bold text-base rounded-full hover:bg-white hover:text-primary-dark hover:-translate-y-0.5 hover:shadow-md transition-all duration-200" data-lang-en="Book Flight" data-lang-bn="ফ্লাইট বুক করুন">Book Flight</a>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full">
+                    <a href="#packages" class="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-3.5 bg-gradient-to-r from-accent to-[#C59B2A] text-charcoal font-bold text-sm sm:text-base rounded-full shadow-lg hover:from-[#E0BE45] hover:to-accent hover:-translate-y-0.5 hover:shadow-xl active:translate-y-0 transition-all duration-200" data-lang-en="View Packages" data-lang-bn="প্যাকেজ দেখুন">View Packages</a>
+                    <a href="#flights" class="w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-3.5 bg-transparent border-2 border-white text-white font-bold text-sm sm:text-base rounded-full hover:bg-white hover:text-primary-dark hover:-translate-y-0.5 hover:shadow-md transition-all duration-200" data-lang-en="Book Flight" data-lang-bn="ফ্লাইট বুক করুন">Book Flight</a>
                 </div>
             </div>
         </section>
 
         <!-- ==================== ABOUT US SECTION ==================== -->
-        <section class="py-16 sm:py-20 lg:py-24 bg-white" id="about" aria-labelledby="aboutTitle">
-            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <section class="py-12 sm:py-20 lg:py-24 bg-white" id="about" aria-labelledby="aboutTitle">
+            <div class="max-w-[1280px] mx-auto px-3 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 lg:gap-16 items-center">
                 <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-primary-surface flex items-center justify-center shadow-md">
                     <img
                         src="https://images.unsplash.com/photo-1584286595398-a595d32cf15b?w=700&q=80"
@@ -125,68 +129,68 @@
                 </div>
                 <div class="flex flex-col items-start">
                     <span class="inline-block text-accent-dark font-bold text-xs tracking-widest uppercase mb-2" data-lang-en="About Our Agency" data-lang-bn="আমাদের সংস্থা সম্পর্কে">About Our Agency</span>
-                    <h2 id="aboutTitle" class="text-2xl sm:text-3xl lg:text-4xl font-bold text-charcoal mb-4 tracking-tight leading-tight" data-lang-en="Guiding Pilgrims With Sincerity & Excellence" data-lang-bn="আন্তরিকতা ও উৎকর্ষতার সাথে pilgrims দের পথ দেখানো">
+                    <h2 id="aboutTitle" class="text-xl sm:text-3xl lg:text-4xl font-bold text-charcoal mb-3 sm:mb-4 tracking-tight leading-tight" data-lang-en="Guiding Pilgrims With Sincerity & Excellence" data-lang-bn="আন্তরিকতা ও উৎকর্ষতার সাথে হাজীদের পথ দেখানো">
                         Guiding Pilgrims With Sincerity & Excellence
                     </h2>
-                    <p class="text-gray-600 mb-4 leading-relaxed" data-lang-en="Noor Al-Iman Travels is a government-licensed Hajj & Umrah agency with over 16 years of dedicated service to the Bangladeshi Muslim community. We have proudly assisted more than 12,000 pilgrims in completing their sacred journeys with comfort, dignity, and spiritual focus."
-                    data-lang-bn="নূর আল-ঈমান ট্রাভেলস একটি সরকার-অনুমোদিত হজ্জ ও উমরাহ এজেন্সি, যা বাংলাদেশী মুসলিম সম্প্রদায়ের জন্য ১৬ বছরেরও বেশি সময় ধরে নিবেদিত সেবা প্রদান করে আসছে। আমরা ১২,০০০-এরও বেশি pilgrims কে তাদের পবিত্র সফর আরাম, মর্যাদা ও আধ্যাত্মিক মনোযোগ সহকারে সম্পন্ন করতে গর্বিতভাবে সহায়তা করেছি।">
+                    <p class="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-base leading-relaxed" data-lang-en="Noor Al-Iman Travels is a government-licensed Hajj & Umrah agency with over 16 years of dedicated service to the Bangladeshi Muslim community. We have proudly assisted more than 12,000 pilgrims in completing their sacred journeys with comfort, dignity, and spiritual focus."
+                    data-lang-bn="নূর আল-ঈমান ট্রাভেলস একটি সরকার-অনুমোদিত হজ্জ ও উমরাহ এজেন্সি, যা বাংলাদেশী মুসলিম সম্প্রদায়ের জন্য ১৬ বছরেরও বেশি সময় ধরে নিবেদিত সেবা প্রদান করে আসছে। আমরা ১২,০০০-এরও বেশি হাজীদের তাদের পবিত্র সফর আরাম, মর্যাদা ও আধ্যাত্মিক মনোযোগ সহকারে সম্পন্ন করতে গর্বিতভাবে সহায়তা করেছি।">
                         Noor Al-Iman Travels is a government-licensed Hajj & Umrah agency with over 16 years of dedicated service to the Bangladeshi Muslim community. We have proudly assisted more than <strong class="text-gray-900 font-semibold">12,000 pilgrims</strong> in completing their sacred journeys with comfort, dignity, and spiritual focus.
                     </p>
-                    <p class="text-gray-600 mb-6 leading-relaxed" data-lang-en="From visa processing and premium accommodations near the Haramain to guided Ziyarah tours and 24/7 on-ground support in Saudi Arabia, our comprehensive services ensure a worry-free pilgrimage experience."
-                    data-lang-bn="ভিসা প্রক্রিয়াকরণ এবং হারামাইন-এর নিকটবর্তী প্রিমিয়াম আবাসন থেকে শুরু করে গাইডেড জিয়ারাহ ট্যুর এবং সৌদি আরবে ২৪/৭ অন-গ্রাউন্ড সাপোর্ট পর্যন্ত, আমাদের বিস্তৃত পরিষেবা একটি চিন্তামুক্ত pilgrimage অভিজ্ঞতা নিশ্চিত করে।">
+                    <p class="text-gray-600 mb-5 sm:mb-6 text-xs sm:text-base leading-relaxed" data-lang-en="From visa processing and premium accommodations near the Haramain to guided Ziyarah tours and 24/7 on-ground support in Saudi Arabia, our comprehensive services ensure a worry-free pilgrimage experience."
+                    data-lang-bn="ভিসা প্রক্রিয়াকরণ এবং হারামাইন-এর নিকটবর্তী প্রিমিয়াম আবাসন থেকে শুরু করে গাইডেড জিয়ারাহ ট্যুর এবং সৌদি আরবে ২৪/৭ অন-গ্রাউন্ড সাপোর্ট পর্যন্ত, আমাদের বিস্তৃত পরিষেবা একটি চিন্তামুক্ত পবিত্র সফরের অভিজ্ঞতা নিশ্চিত করে।">
                         From visa processing and premium accommodations near the Haramain to guided Ziyarah tours and 24/7 on-ground support in Saudi Arabia, our comprehensive services ensure a worry-free pilgrimage experience.
                     </p>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="inline-flex items-center gap-2 bg-primary-surface text-primary-dark px-4 py-2 rounded-full font-semibold text-xs border border-primary/10 shadow-xs"><span class="w-2 h-2 rounded-full bg-accent"></span> Govt. Licensed (HAAB)</span>
-                        <span class="inline-flex items-center gap-2 bg-primary-surface text-primary-dark px-4 py-2 rounded-full font-semibold text-xs border border-primary/10 shadow-xs"><span class="w-2 h-2 rounded-full bg-accent"></span> IATA Certified</span>
-                        <span class="inline-flex items-center gap-2 bg-primary-surface text-primary-dark px-4 py-2 rounded-full font-semibold text-xs border border-primary/10 shadow-xs"><span class="w-2 h-2 rounded-full bg-accent"></span> 16+ Years Exp.</span>
-                        <span class="inline-flex items-center gap-2 bg-primary-surface text-primary-dark px-4 py-2 rounded-full font-semibold text-xs border border-primary/10 shadow-xs"><span class="w-2 h-2 rounded-full bg-accent"></span> 12,000+ Pilgrims</span>
+                    <div class="grid grid-cols-2 xs:flex xs:flex-wrap gap-2 sm:gap-3 w-full">
+                        <span class="inline-flex items-center justify-center xs:justify-start gap-1.5 bg-primary-surface text-primary-dark px-2.5 py-1.5 sm:px-4 sm:py-2 rounded-full font-semibold text-[11px] sm:text-xs border border-primary/10 shadow-xs"><span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-accent shrink-0"></span> Govt. Licensed</span>
+                        <span class="inline-flex items-center justify-center xs:justify-start gap-1.5 bg-primary-surface text-primary-dark px-2.5 py-1.5 sm:px-4 sm:py-2 rounded-full font-semibold text-[11px] sm:text-xs border border-primary/10 shadow-xs"><span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-accent shrink-0"></span> IATA Certified</span>
+                        <span class="inline-flex items-center justify-center xs:justify-start gap-1.5 bg-primary-surface text-primary-dark px-2.5 py-1.5 sm:px-4 sm:py-2 rounded-full font-semibold text-[11px] sm:text-xs border border-primary/10 shadow-xs"><span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-accent shrink-0"></span> 16+ Years Exp.</span>
+                        <span class="inline-flex items-center justify-center xs:justify-start gap-1.5 bg-primary-surface text-primary-dark px-2.5 py-1.5 sm:px-4 sm:py-2 rounded-full font-semibold text-[11px] sm:text-xs border border-primary/10 shadow-xs"><span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-accent shrink-0"></span> 12k+ Pilgrims</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ==================== PACKAGES SECTION ==================== -->
-        <section class="py-16 sm:py-20 lg:py-24 bg-[#FAFAF8]" id="packages" aria-labelledby="packagesTitle">
-            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-10 sm:mb-14">
+        <section class="py-12 sm:py-20 lg:py-24 bg-[#FAFAF8]" id="packages" aria-labelledby="packagesTitle">
+            <div class="max-w-[1280px] mx-auto px-3 sm:px-6 lg:px-8">
+                <div class="text-center mb-8 sm:mb-14">
                     <span class="inline-block text-accent-dark font-bold text-xs tracking-widest uppercase mb-2" data-lang-en="Sacred Journeys" data-lang-bn="পবিত্র সফর">Sacred Journeys</span>
-                    <h2 id="packagesTitle" class="text-2xl sm:text-3xl lg:text-4xl font-bold text-charcoal tracking-tight mb-3" data-lang-en="Our Sacred Packages" data-lang-bn="আমাদের পবিত্র প্যাকেজসমূহ">Our Sacred Packages</h2>
-                    <p class="text-gray-500 max-w-xl mx-auto text-sm sm:text-base" data-lang-en="Choose from our carefully curated Hajj and Umrah packages, designed to suit every budget while maintaining the highest standards of comfort and spiritual guidance."
+                    <h2 id="packagesTitle" class="text-xl sm:text-3xl lg:text-4xl font-bold text-charcoal tracking-tight mb-2 sm:mb-3" data-lang-en="Our Sacred Packages" data-lang-bn="আমাদের পবিত্র প্যাকেজসমূহ">Our Sacred Packages</h2>
+                    <p class="text-gray-500 max-w-xl mx-auto text-xs sm:text-base px-2" data-lang-en="Choose from our carefully curated Hajj and Umrah packages, designed to suit every budget while maintaining the highest standards of comfort and spiritual guidance."
                     data-lang-bn="আমাদের সতর্কতার সাথে তৈরি হজ্জ ও উমরাহ প্যাকেজ থেকে বেছে নিন, যা প্রতিটি বাজেটের জন্য উপযোগী এবং সর্বোচ্চ আরাম ও আধ্যাত্মিক দিকনির্দেশনার মান বজায় রাখে।">
                         Choose from our carefully curated Hajj and Umrah packages, designed to suit every budget while maintaining the highest standards of comfort and spiritual guidance.
                     </p>
                 </div>
 
-                <div class="flex justify-center gap-3 mb-10 flex-wrap" role="tablist" aria-label="Package categories">
-                    <button class="package-tab active px-8 py-3 rounded-full font-semibold text-sm sm:text-base border-2 border-gray-200 bg-white text-gray-600 hover:border-accent hover:text-primary transition-all duration-200 cursor-pointer shadow-xs" role="tab" aria-selected="true" data-tab="hajj" id="tabHajj">
+                <div class="flex justify-center gap-2 sm:gap-3 mb-8 sm:mb-10 w-full max-w-md mx-auto" role="tablist" aria-label="Package categories">
+                    <button class="package-tab active flex-1 xs:flex-none justify-center px-4 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold text-xs sm:text-base border-2 border-gray-200 bg-white text-gray-600 hover:border-accent hover:text-primary transition-all duration-200 cursor-pointer shadow-xs text-center whitespace-nowrap" role="tab" aria-selected="true" data-tab="hajj" id="tabHajj" data-lang-en="🕋 Hajj Packages" data-lang-bn="🕋 হজ্জ প্যাকেজ">
                         🕋 Hajj Packages
                     </button>
-                    <button class="package-tab px-8 py-3 rounded-full font-semibold text-sm sm:text-base border-2 border-gray-200 bg-white text-gray-600 hover:border-accent hover:text-primary transition-all duration-200 cursor-pointer shadow-xs" role="tab" aria-selected="false" data-tab="umrah" id="tabUmrah">
+                    <button class="package-tab flex-1 xs:flex-none justify-center px-4 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold text-xs sm:text-base border-2 border-gray-200 bg-white text-gray-600 hover:border-accent hover:text-primary transition-all duration-200 cursor-pointer shadow-xs text-center whitespace-nowrap" role="tab" aria-selected="false" data-tab="umrah" id="tabUmrah" data-lang-en="🕌 Umrah Packages" data-lang-bn="🕌 উমরাহ প্যাকেজ">
                         🕌 Umrah Packages
                     </button>
                 </div>
 
                 <!-- Hajj Package Grid -->
-                <div class="package-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-300" id="hajjGrid" role="tabpanel" aria-labelledby="tabHajj">
+                <div class="package-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 transition-all duration-300" id="hajjGrid" role="tabpanel" aria-labelledby="tabHajj">
                     <!-- Hajj Card 1 -->
                     <article class="package-card group bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-1.5 hover:border-accent-light transition-all duration-300 flex flex-col">
                         <div class="relative aspect-[16/10] overflow-hidden bg-gray-200">
                             <img src="https://images.unsplash.com/photo-1565552645632-d725f8bfc19a?w=600&q=75" alt="Kaaba at prayer time" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                            <span class="absolute top-3 right-3 bg-accent text-charcoal font-bold text-xs px-3 py-1 rounded-full shadow-sm">Popular</span>
+                            <span class="absolute top-3 right-3 bg-accent text-charcoal font-bold text-[11px] sm:text-xs px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full shadow-sm" data-lang-en="Popular" data-lang-bn="জনপ্রিয়">Popular</span>
                         </div>
-                        <div class="p-6 flex-1 flex flex-col gap-4">
-                            <h3 class="text-xl font-bold text-charcoal tracking-tight">Economy Hajj 2026</h3>
-                            <ul class="space-y-2 flex-1 text-sm text-gray-600">
+                        <div class="p-4 sm:p-6 flex-1 flex flex-col gap-3.5 sm:gap-4">
+                            <h3 class="text-lg sm:text-xl font-bold text-charcoal tracking-tight" data-lang-en="Economy Hajj 2026" data-lang-bn="ইকোনমি হজ্জ ২০২৬">Economy Hajj 2026</h3>
+                            <ul class="space-y-2 flex-1 text-xs sm:text-sm text-gray-600">
                                 <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> Hotel within 800m of Haram</li>
                                 <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> Buffet catering (3 meals/day)</li>
                                 <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> Group guide & scholar</li>
                                 <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> Shared transport</li>
                                 <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> Visa processing included</li>
                             </ul>
-                            <div class="pt-4 border-t border-gray-100 flex items-center justify-between gap-3 mt-auto">
-                                <span class="text-2xl font-extrabold text-primary-dark tracking-tight">৳ 4,85,000 <small class="text-xs font-normal text-gray-500">/ person</small></span>
-                                <a href="#" class="inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-accent to-[#C59B2A] text-charcoal font-semibold text-xs rounded-full shadow-sm hover:from-[#E0BE45] hover:to-accent transition-all">Book Now</a>
+                            <div class="pt-3 sm:pt-4 border-t border-gray-100 flex flex-wrap items-center justify-between gap-2 mt-auto">
+                                <span class="text-lg xs:text-xl sm:text-2xl font-extrabold text-primary-dark tracking-tight">৳ 4,85,000 <small class="text-[11px] sm:text-xs font-normal text-gray-500">/ person</small></span>
+                                <a href="#" class="inline-flex items-center justify-center px-3.5 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-r from-accent to-[#C59B2A] text-charcoal font-semibold text-xs rounded-full shadow-sm hover:from-[#E0BE45] hover:to-accent transition-all shrink-0" data-lang-en="Book Now" data-lang-bn="বুক করুন">Book Now</a>
                             </div>
                         </div>
                     </article>
@@ -195,18 +199,18 @@
                         <div class="relative aspect-[16/10] overflow-hidden bg-gray-200">
                             <img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?w=600&q=75" alt="Pilgrims at Mina tents" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                         </div>
-                        <div class="p-6 flex-1 flex flex-col gap-4">
-                            <h3 class="text-xl font-bold text-charcoal tracking-tight">Standard Hajj 2026</h3>
-                            <ul class="space-y-2 flex-1 text-sm text-gray-600">
+                        <div class="p-4 sm:p-6 flex-1 flex flex-col gap-3.5 sm:gap-4">
+                            <h3 class="text-lg sm:text-xl font-bold text-charcoal tracking-tight" data-lang-en="Standard Hajj 2026" data-lang-bn="স্ট্যান্ডার্ড হজ্জ ২০২৬">Standard Hajj 2026</h3>
+                            <ul class="space-y-2 flex-1 text-xs sm:text-sm text-gray-600">
                                 <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> Hotel within 500m of Haram</li>
                                 <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> Premium catering</li>
                                 <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> Dedicated group scholar</li>
                                 <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> Private AC transport</li>
                                 <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> Express visa processing</li>
                             </ul>
-                            <div class="pt-4 border-t border-gray-100 flex items-center justify-between gap-3 mt-auto">
-                                <span class="text-2xl font-extrabold text-primary-dark tracking-tight">৳ 6,25,000 <small class="text-xs font-normal text-gray-500">/ person</small></span>
-                                <a href="#" class="inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-accent to-[#C59B2A] text-charcoal font-semibold text-xs rounded-full shadow-sm hover:from-[#E0BE45] hover:to-accent transition-all">Book Now</a>
+                            <div class="pt-3 sm:pt-4 border-t border-gray-100 flex flex-wrap items-center justify-between gap-2 mt-auto">
+                                <span class="text-lg xs:text-xl sm:text-2xl font-extrabold text-primary-dark tracking-tight">৳ 6,25,000 <small class="text-[11px] sm:text-xs font-normal text-gray-500">/ person</small></span>
+                                <a href="#" class="inline-flex items-center justify-center px-3.5 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-r from-accent to-[#C59B2A] text-charcoal font-semibold text-xs rounded-full shadow-sm hover:from-[#E0BE45] hover:to-accent transition-all shrink-0" data-lang-en="Book Now" data-lang-bn="বুক করুন">Book Now</a>
                             </div>
                         </div>
                     </article>
@@ -214,45 +218,45 @@
                     <article class="package-card group bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-1.5 hover:border-accent-light transition-all duration-300 flex flex-col">
                         <div class="relative aspect-[16/10] overflow-hidden bg-gray-200">
                             <img src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=600&q=75" alt="Masjid al-Haram courtyard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                            <span class="absolute top-3 right-3 bg-accent text-charcoal font-bold text-xs px-3 py-1 rounded-full shadow-sm">Premium</span>
+                            <span class="absolute top-3 right-3 bg-accent text-charcoal font-bold text-[11px] sm:text-xs px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full shadow-sm" data-lang-en="Premium" data-lang-bn="প্রিমিয়াম">Premium</span>
                         </div>
-                        <div class="p-6 flex-1 flex flex-col gap-4">
-                            <h3 class="text-xl font-bold text-charcoal tracking-tight">Premium Hajj 2026</h3>
-                            <ul class="space-y-2 flex-1 text-sm text-gray-600">
+                        <div class="p-4 sm:p-6 flex-1 flex flex-col gap-3.5 sm:gap-4">
+                            <h3 class="text-lg sm:text-xl font-bold text-charcoal tracking-tight" data-lang-en="Premium Hajj 2026" data-lang-bn="প্রিমিয়াম হজ্জ ২০২৬">Premium Hajj 2026</h3>
+                            <ul class="space-y-2 flex-1 text-xs sm:text-sm text-gray-600">
                                 <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> 5★ hotel facing Haram</li>
                                 <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> Gourmet dining</li>
                                 <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> Private scholar & guide</li>
                                 <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> Luxury SUV transport</li>
                                 <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> VIP lounge access</li>
                             </ul>
-                            <div class="pt-4 border-t border-gray-100 flex items-center justify-between gap-3 mt-auto">
-                                <span class="text-2xl font-extrabold text-primary-dark tracking-tight">৳ 9,80,000 <small class="text-xs font-normal text-gray-500">/ person</small></span>
-                                <a href="#" class="inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-accent to-[#C59B2A] text-charcoal font-semibold text-xs rounded-full shadow-sm hover:from-[#E0BE45] hover:to-accent transition-all">Book Now</a>
+                            <div class="pt-3 sm:pt-4 border-t border-gray-100 flex flex-wrap items-center justify-between gap-2 mt-auto">
+                                <span class="text-lg xs:text-xl sm:text-2xl font-extrabold text-primary-dark tracking-tight">৳ 9,80,000 <small class="text-[11px] sm:text-xs font-normal text-gray-500">/ person</small></span>
+                                <a href="#" class="inline-flex items-center justify-center px-3.5 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-r from-accent to-[#C59B2A] text-charcoal font-semibold text-xs rounded-full shadow-sm hover:from-[#E0BE45] hover:to-accent transition-all shrink-0" data-lang-en="Book Now" data-lang-bn="বুক করুন">Book Now</a>
                             </div>
                         </div>
                     </article>
                 </div>
 
                 <!-- Umrah Package Grid (hidden by default) -->
-                <div class="package-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-300 hidden" id="umrahGrid" role="tabpanel" aria-labelledby="tabUmrah">
+                <div class="package-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 transition-all duration-300 hidden" id="umrahGrid" role="tabpanel" aria-labelledby="tabUmrah">
                     <!-- Umrah Card 1 -->
                     <article class="package-card group bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-1.5 hover:border-accent-light transition-all duration-300 flex flex-col">
                         <div class="relative aspect-[16/10] overflow-hidden bg-gray-200">
                             <img src="https://images.unsplash.com/photo-1584286595398-a595d32cf15b?w=600&q=75" alt="Madinah mosque at sunset" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                            <span class="absolute top-3 right-3 bg-accent text-charcoal font-bold text-xs px-3 py-1 rounded-full shadow-sm">Best Value</span>
+                            <span class="absolute top-3 right-3 bg-accent text-charcoal font-bold text-[11px] sm:text-xs px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full shadow-sm" data-lang-en="Best Value" data-lang-bn="সেরা মান">Best Value</span>
                         </div>
-                        <div class="p-6 flex-1 flex flex-col gap-4">
-                            <h3 class="text-xl font-bold text-charcoal tracking-tight">Economy Umrah</h3>
-                            <ul class="space-y-2 flex-1 text-sm text-gray-600">
+                        <div class="p-4 sm:p-6 flex-1 flex flex-col gap-3.5 sm:gap-4">
+                            <h3 class="text-lg sm:text-xl font-bold text-charcoal tracking-tight" data-lang-en="Economy Umrah" data-lang-bn="ইকোনমি উমরাহ">Economy Umrah</h3>
+                            <ul class="space-y-2 flex-1 text-xs sm:text-sm text-gray-600">
                                 <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> 10 days / 9 nights</li>
                                 <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> Hotel within 600m of Haram</li>
                                 <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> Daily breakfast included</li>
                                 <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> Ziyarah tours included</li>
                                 <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> Visa processing</li>
                             </ul>
-                            <div class="pt-4 border-t border-gray-100 flex items-center justify-between gap-3 mt-auto">
-                                <span class="text-2xl font-extrabold text-primary-dark tracking-tight">৳ 1,45,000 <small class="text-xs font-normal text-gray-500">/ person</small></span>
-                                <a href="#" class="inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-accent to-[#C59B2A] text-charcoal font-semibold text-xs rounded-full shadow-sm hover:from-[#E0BE45] hover:to-accent transition-all">Book Now</a>
+                            <div class="pt-3 sm:pt-4 border-t border-gray-100 flex flex-wrap items-center justify-between gap-2 mt-auto">
+                                <span class="text-lg xs:text-xl sm:text-2xl font-extrabold text-primary-dark tracking-tight">৳ 1,45,000 <small class="text-[11px] sm:text-xs font-normal text-gray-500">/ person</small></span>
+                                <a href="#" class="inline-flex items-center justify-center px-3.5 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-r from-accent to-[#C59B2A] text-charcoal font-semibold text-xs rounded-full shadow-sm hover:from-[#E0BE45] hover:to-accent transition-all shrink-0" data-lang-en="Book Now" data-lang-bn="বুক করুন">Book Now</a>
                             </div>
                         </div>
                     </article>
@@ -261,18 +265,18 @@
                         <div class="relative aspect-[16/10] overflow-hidden bg-gray-200">
                             <img src="https://images.unsplash.com/photo-1575101261474-5cb565114bb9?w=600&q=75" alt="Pilgrims walking in Madinah" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                         </div>
-                        <div class="p-6 flex-1 flex flex-col gap-4">
-                            <h3 class="text-xl font-bold text-charcoal tracking-tight">Standard Umrah</h3>
-                            <ul class="space-y-2 flex-1 text-sm text-gray-600">
+                        <div class="p-4 sm:p-6 flex-1 flex flex-col gap-3.5 sm:gap-4">
+                            <h3 class="text-lg sm:text-xl font-bold text-charcoal tracking-tight" data-lang-en="Standard Umrah" data-lang-bn="স্ট্যান্ডার্ড উমরাহ">Standard Umrah</h3>
+                            <ul class="space-y-2 flex-1 text-xs sm:text-sm text-gray-600">
                                 <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> 14 days / 13 nights</li>
                                 <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> Hotel within 350m of Haram</li>
                                 <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> Half-board catering</li>
                                 <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> Guided Ziyarah</li>
                                 <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> Express visa</li>
                             </ul>
-                            <div class="pt-4 border-t border-gray-100 flex items-center justify-between gap-3 mt-auto">
-                                <span class="text-2xl font-extrabold text-primary-dark tracking-tight">৳ 2,20,000 <small class="text-xs font-normal text-gray-500">/ person</small></span>
-                                <a href="#" class="inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-accent to-[#C59B2A] text-charcoal font-semibold text-xs rounded-full shadow-sm hover:from-[#E0BE45] hover:to-accent transition-all">Book Now</a>
+                            <div class="pt-3 sm:pt-4 border-t border-gray-100 flex flex-wrap items-center justify-between gap-2 mt-auto">
+                                <span class="text-lg xs:text-xl sm:text-2xl font-extrabold text-primary-dark tracking-tight">৳ 2,20,000 <small class="text-[11px] sm:text-xs font-normal text-gray-500">/ person</small></span>
+                                <a href="#" class="inline-flex items-center justify-center px-3.5 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-r from-accent to-[#C59B2A] text-charcoal font-semibold text-xs rounded-full shadow-sm hover:from-[#E0BE45] hover:to-accent transition-all shrink-0" data-lang-en="Book Now" data-lang-bn="বুক করুন">Book Now</a>
                             </div>
                         </div>
                     </article>
@@ -280,20 +284,20 @@
                     <article class="package-card group bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-1.5 hover:border-accent-light transition-all duration-300 flex flex-col">
                         <div class="relative aspect-[16/10] overflow-hidden bg-gray-200">
                             <img src="https://images.unsplash.com/photo-1566438480900-58e7b2e2aec5?w=600&q=75" alt="Luxurious hotel view near Haram" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-                            <span class="absolute top-3 right-3 bg-accent text-charcoal font-bold text-xs px-3 py-1 rounded-full shadow-sm">Luxury</span>
+                            <span class="absolute top-3 right-3 bg-accent text-charcoal font-bold text-[11px] sm:text-xs px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full shadow-sm" data-lang-en="Luxury" data-lang-bn="লাক্সারি">Luxury</span>
                         </div>
-                        <div class="p-6 flex-1 flex flex-col gap-4">
-                            <h3 class="text-xl font-bold text-charcoal tracking-tight">Premium Umrah</h3>
-                            <ul class="space-y-2 flex-1 text-sm text-gray-600">
+                        <div class="p-4 sm:p-6 flex-1 flex flex-col gap-3.5 sm:gap-4">
+                            <h3 class="text-lg sm:text-xl font-bold text-charcoal tracking-tight" data-lang-en="Premium Umrah" data-lang-bn="প্রিমিয়াম উমরাহ">Premium Umrah</h3>
+                            <ul class="space-y-2 flex-1 text-xs sm:text-sm text-gray-600">
                                 <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> 14 days / 13 nights</li>
                                 <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> 5★ Haram-view hotel</li>
                                 <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> Full-board gourmet dining</li>
                                 <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> Private scholar companion</li>
                                 <li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> Luxury transfers</li>
                             </ul>
-                            <div class="pt-4 border-t border-gray-100 flex items-center justify-between gap-3 mt-auto">
-                                <span class="text-2xl font-extrabold text-primary-dark tracking-tight">৳ 3,85,000 <small class="text-xs font-normal text-gray-500">/ person</small></span>
-                                <a href="#" class="inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-accent to-[#C59B2A] text-charcoal font-semibold text-xs rounded-full shadow-sm hover:from-[#E0BE45] hover:to-accent transition-all">Book Now</a>
+                            <div class="pt-3 sm:pt-4 border-t border-gray-100 flex flex-wrap items-center justify-between gap-2 mt-auto">
+                                <span class="text-lg xs:text-xl sm:text-2xl font-extrabold text-primary-dark tracking-tight">৳ 3,85,000 <small class="text-[11px] sm:text-xs font-normal text-gray-500">/ person</small></span>
+                                <a href="#" class="inline-flex items-center justify-center px-3.5 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-r from-accent to-[#C59B2A] text-charcoal font-semibold text-xs rounded-full shadow-sm hover:from-[#E0BE45] hover:to-accent transition-all shrink-0" data-lang-en="Book Now" data-lang-bn="বুক করুন">Book Now</a>
                             </div>
                         </div>
                     </article>
@@ -302,20 +306,20 @@
         </section>
 
         <!-- ==================== FLIGHT BOOKING SECTION ==================== -->
-        <section class="relative py-16 sm:py-20 lg:py-24 bg-primary-dark text-white overflow-hidden" id="flights" aria-labelledby="flightTitle">
+        <section class="relative py-12 sm:py-20 lg:py-24 bg-primary-dark text-white overflow-hidden" id="flights" aria-labelledby="flightTitle">
             <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_30%_20%,rgba(212,175,55,0.1)_0%,transparent_60%),radial-gradient(ellipse_at_70%_80%,rgba(212,175,55,0.06)_0%,transparent_60%)]"></div>
-            <div class="relative z-10 max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-10 sm:mb-12">
-                    <h2 id="flightTitle" class="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-3" data-lang-en="Book Your Flight to the Holy Land" data-lang-bn="পবিত্র ভূমিতে আপনার ফ্লাইট বুক করুন">Book Your Flight to the Holy Land</h2>
-                    <p class="opacity-85 max-w-xl mx-auto text-sm sm:text-base" data-lang-en="Search and compare the best airfares from Bangladesh to Jeddah & Madinah with our easy-to-use flight booking widget."
+            <div class="relative z-10 max-w-[1280px] mx-auto px-3 sm:px-6 lg:px-8">
+                <div class="text-center mb-8 sm:mb-12">
+                    <h2 id="flightTitle" class="text-xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-2 sm:mb-3" data-lang-en="Book Your Flight to the Holy Land" data-lang-bn="পবিত্র ভূমিতে আপনার ফ্লাইট বুক করুন">Book Your Flight to the Holy Land</h2>
+                    <p class="opacity-85 max-w-xl mx-auto text-xs sm:text-base px-2" data-lang-en="Search and compare the best airfares from Bangladesh to Jeddah & Madinah with our easy-to-use flight booking widget."
                     data-lang-bn="আমাদের সহজ ফ্লাইট বুকিং উইজেটের মাধ্যমে বাংলাদেশ থেকে জেদ্দা ও মদিনার সেরা বিমান ভাড়া অনুসন্ধান ও তুলনা করুন।">
                         Search and compare the best airfares from Bangladesh to Jeddah & Madinah with our easy-to-use flight booking widget.
                     </p>
                 </div>
-                <form class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 bg-white/10 backdrop-blur-md rounded-2xl p-6 lg:p-8 border border-white/20 items-end shadow-xl" id="flightSearchForm" aria-label="Flight search form">
-                    <div class="flex flex-col gap-1.5">
-                        <label for="departureFrom" class="text-xs font-semibold uppercase tracking-wider opacity-90">From (Departure)</label>
-                        <select id="departureFrom" required class="w-full px-4 py-3 rounded-xl border-2 border-white/30 bg-white/95 text-charcoal font-medium focus:border-accent focus:ring-4 focus:ring-accent-glow focus:outline-none transition-all">
+                <form class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-3.5 sm:gap-4 bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20 items-end shadow-xl" id="flightSearchForm" aria-label="Flight search form">
+                    <div class="flex flex-col gap-1 sm:gap-1.5">
+                        <label for="departureFrom" class="text-[11px] sm:text-xs font-semibold uppercase tracking-wider opacity-90" data-lang-en="From (Departure)" data-lang-bn="প্রস্থান (কোথা থেকে)">From (Departure)</label>
+                        <select id="departureFrom" required class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg sm:rounded-xl border-2 border-white/30 bg-white/95 text-charcoal font-medium text-xs sm:text-sm focus:border-accent focus:ring-4 focus:ring-accent-glow focus:outline-none transition-all">
                             <option value="">Select city</option>
                             <option value="DAC">Dhaka (DAC)</option>
                             <option value="CGP">Chattogram (CGP)</option>
@@ -323,26 +327,26 @@
                             <option value="CXB">Cox's Bazar (CXB)</option>
                         </select>
                     </div>
-                    <div class="flex flex-col gap-1.5">
-                        <label for="arrivalTo" class="text-xs font-semibold uppercase tracking-wider opacity-90">To (Destination)</label>
-                        <select id="arrivalTo" required class="w-full px-4 py-3 rounded-xl border-2 border-white/30 bg-white/95 text-charcoal font-medium focus:border-accent focus:ring-4 focus:ring-accent-glow focus:outline-none transition-all">
+                    <div class="flex flex-col gap-1 sm:gap-1.5">
+                        <label for="arrivalTo" class="text-[11px] sm:text-xs font-semibold uppercase tracking-wider opacity-90" data-lang-en="To (Destination)" data-lang-bn="গন্তব্য (কোথায়)">To (Destination)</label>
+                        <select id="arrivalTo" required class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg sm:rounded-xl border-2 border-white/30 bg-white/95 text-charcoal font-medium text-xs sm:text-sm focus:border-accent focus:ring-4 focus:ring-accent-glow focus:outline-none transition-all">
                             <option value="">Select city</option>
                             <option value="JED">Jeddah (JED)</option>
                             <option value="MED">Madinah (MED)</option>
                             <option value="RUH">Riyadh (RUH)</option>
                         </select>
                     </div>
-                    <div class="flex flex-col gap-1.5">
-                        <label for="departDate" class="text-xs font-semibold uppercase tracking-wider opacity-90">Departure Date</label>
-                        <input type="date" id="departDate" required min="2026-01-01" class="w-full px-4 py-3 rounded-xl border-2 border-white/30 bg-white/95 text-charcoal font-medium focus:border-accent focus:ring-4 focus:ring-accent-glow focus:outline-none transition-all">
+                    <div class="flex flex-col gap-1 sm:gap-1.5">
+                        <label for="departDate" class="text-[11px] sm:text-xs font-semibold uppercase tracking-wider opacity-90" data-lang-en="Departure Date" data-lang-bn="যাত্রার তারিখ">Departure Date</label>
+                        <input type="date" id="departDate" required min="2026-01-01" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg sm:rounded-xl border-2 border-white/30 bg-white/95 text-charcoal font-medium text-xs sm:text-sm focus:border-accent focus:ring-4 focus:ring-accent-glow focus:outline-none transition-all">
                     </div>
-                    <div class="flex flex-col gap-1.5">
-                        <label for="returnDate" class="text-xs font-semibold uppercase tracking-wider opacity-90">Return Date</label>
-                        <input type="date" id="returnDate" required min="2026-01-05" class="w-full px-4 py-3 rounded-xl border-2 border-white/30 bg-white/95 text-charcoal font-medium focus:border-accent focus:ring-4 focus:ring-accent-glow focus:outline-none transition-all">
+                    <div class="flex flex-col gap-1 sm:gap-1.5">
+                        <label for="returnDate" class="text-[11px] sm:text-xs font-semibold uppercase tracking-wider opacity-90" data-lang-en="Return Date" data-lang-bn="ফেরার তারিখ">Return Date</label>
+                        <input type="date" id="returnDate" required min="2026-01-05" class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg sm:rounded-xl border-2 border-white/30 bg-white/95 text-charcoal font-medium text-xs sm:text-sm focus:border-accent focus:ring-4 focus:ring-accent-glow focus:outline-none transition-all">
                     </div>
-                    <div class="flex flex-col gap-1.5">
-                        <label for="travelersClass" class="text-xs font-semibold uppercase tracking-wider opacity-90">Travelers & Class</label>
-                        <select id="travelersClass" required class="w-full px-4 py-3 rounded-xl border-2 border-white/30 bg-white/95 text-charcoal font-medium focus:border-accent focus:ring-4 focus:ring-accent-glow focus:outline-none transition-all">
+                    <div class="flex flex-col gap-1 sm:gap-1.5">
+                        <label for="travelersClass" class="text-[11px] sm:text-xs font-semibold uppercase tracking-wider opacity-90" data-lang-en="Travelers & Class" data-lang-bn="যাত্রী ও ক্লাস">Travelers & Class</label>
+                        <select id="travelersClass" required class="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg sm:rounded-xl border-2 border-white/30 bg-white/95 text-charcoal font-medium text-xs sm:text-sm focus:border-accent focus:ring-4 focus:ring-accent-glow focus:outline-none transition-all">
                             <option value="">Select</option>
                             <option value="1-economy">1 Adult · Economy</option>
                             <option value="2-economy">2 Adults · Economy</option>
@@ -351,7 +355,7 @@
                             <option value="family-economy">Family (4+) · Economy</option>
                         </select>
                     </div>
-                    <button type="submit" class="w-full py-3.5 px-6 bg-gradient-to-r from-accent to-[#C59B2A] text-charcoal font-bold text-sm rounded-xl shadow-lg hover:from-[#E0BE45] hover:to-accent hover:shadow-xl transition-all cursor-pointer">
+                    <button type="submit" class="w-full py-3 sm:py-3.5 px-4 sm:px-6 bg-gradient-to-r from-accent to-[#C59B2A] text-charcoal font-bold text-xs sm:text-sm rounded-lg sm:rounded-xl shadow-lg hover:from-[#E0BE45] hover:to-accent hover:shadow-xl transition-all cursor-pointer" data-lang-en="✈ Search Flights" data-lang-bn="✈ ফ্লাইট খুঁজুন">
                         ✈ Search Flights
                     </button>
                 </form>
@@ -360,21 +364,21 @@
     </main>
 
     <!-- ==================== FOOTER ==================== -->
-    <footer class="bg-footer-bg text-footer-text pt-16 sm:pt-20 pb-0" id="contact" role="contentinfo">
-        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 pb-12">
+    <footer class="bg-footer-bg text-footer-text pt-12 sm:pt-20 pb-0" id="contact" role="contentinfo">
+        <div class="max-w-[1280px] mx-auto px-3 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12 pb-10 sm:pb-12">
             <div class="flex flex-col items-start">
-                <a href="#" class="flex items-center gap-3 font-extrabold text-xl mb-4" aria-label="Noor Al-Iman Travels Home">
-                    <span class="w-[42px] h-[42px] bg-gradient-to-br from-primary to-primary-dark rounded-xl flex items-center justify-center text-accent text-xl shrink-0">🕋</span>
+                <a href="#" class="flex items-center gap-2.5 sm:gap-3 font-extrabold text-lg sm:text-xl mb-3 sm:mb-4" aria-label="Noor Al-Iman Travels Home">
+                    <span class="w-9 h-9 sm:w-[42px] sm:h-[42px] bg-gradient-to-br from-primary to-primary-dark rounded-lg sm:rounded-xl flex items-center justify-center text-accent text-lg sm:text-xl shrink-0">🕋</span>
                     <span class="text-footer-heading" data-lang-en="Noor Al-Iman Travels" data-lang-bn="নূর আল-ঈমান ট্রাভেলস">Noor Al-Iman Travels</span>
                 </a>
-                <p class="text-sm leading-relaxed opacity-85" data-lang-en="A trusted name in Hajj & Umrah services since 2008. Licensed by the Ministry of Religious Affairs, Bangladesh (HAAB License No: 1248). We are committed to serving the pilgrims with honesty, care, and spiritual devotion."
-                data-lang-bn="২০০৮ সাল থেকে হজ্জ ও উমরাহ সেবায় একটি বিশ্বস্ত নাম। বাংলাদেশ ধর্ম বিষয়ক মন্ত্রণালয় কর্তৃক লাইসেন্সপ্রাপ্ত (হাব লাইসেন্স নং: ১২৪৮)। আমরা সততা, যত্ন এবং আধ্যাত্মিক নিষ্ঠার সাথে pilgrims দের সেবা করতে প্রতিশ্রুতিবদ্ধ।">
+                <p class="text-xs sm:text-sm leading-relaxed opacity-85" data-lang-en="A trusted name in Hajj & Umrah services since 2008. Licensed by the Ministry of Religious Affairs, Bangladesh (HAAB License No: 1248). We are committed to serving the pilgrims with honesty, care, and spiritual devotion."
+                data-lang-bn="২০০৮ সাল থেকে হজ্জ ও উমরাহ সেবায় একটি বিশ্বস্ত নাম। বাংলাদেশ ধর্ম বিষয়ক মন্ত্রণালয় কর্তৃক লাইসেন্সপ্রাপ্ত (হাব লাইসেন্স নং: ১২৪৮)। আমরা সততা, যত্ন এবং আধ্যাত্মিক নিষ্ঠার সাথে হাজীদের সেবা করতে প্রতিশ্রুতিবদ্ধ।">
                     A trusted name in Hajj & Umrah services since 2008. Licensed by the Ministry of Religious Affairs, Bangladesh (HAAB License No: 1248). We are committed to serving the pilgrims with honesty, care, and spiritual devotion.
                 </p>
             </div>
             <div>
-                <h4 class="text-footer-heading font-bold mb-4 text-base tracking-wider uppercase" data-lang-en="Quick Links" data-lang-bn="দ্রুত লিঙ্ক">Quick Links</h4>
-                <ul class="space-y-2 text-sm">
+                <h4 class="text-footer-heading font-bold mb-3 sm:mb-4 text-xs sm:text-base tracking-wider uppercase" data-lang-en="Quick Links" data-lang-bn="দ্রুত লিঙ্ক">Quick Links</h4>
+                <ul class="space-y-2 text-xs sm:text-sm">
                     <li><a href="#home" class="opacity-80 hover:opacity-100 hover:text-accent hover:translate-x-1 inline-block transition-all" data-lang-en="Home" data-lang-bn="হোম">Home</a></li>
                     <li><a href="#about" class="opacity-80 hover:opacity-100 hover:text-accent hover:translate-x-1 inline-block transition-all" data-lang-en="About Us" data-lang-bn="আমাদের সম্পর্কে">About Us</a></li>
                     <li><a href="#packages" class="opacity-80 hover:opacity-100 hover:text-accent hover:translate-x-1 inline-block transition-all" data-lang-en="Hajj Packages" data-lang-bn="হজ্জ প্যাকেজ">Hajj Packages</a></li>
@@ -383,35 +387,35 @@
                 </ul>
             </div>
             <div>
-                <h4 class="text-footer-heading font-bold mb-4 text-base tracking-wider uppercase" data-lang-en="Contact Us" data-lang-bn="যোগাযোগ">Contact Us</h4>
-                <ul class="space-y-3 text-sm opacity-85">
-                    <li class="flex items-start gap-3">
+                <h4 class="text-footer-heading font-bold mb-3 sm:mb-4 text-xs sm:text-base tracking-wider uppercase" data-lang-en="Contact Us" data-lang-bn="যোগাযোগ">Contact Us</h4>
+                <ul class="space-y-2.5 sm:space-y-3 text-xs sm:text-sm opacity-85">
+                    <li class="flex items-start gap-2.5 sm:gap-3">
                         <span class="text-accent font-bold shrink-0">📞</span>
                         <span>+880 1712-345678<br>+880 1918-765432</span>
                     </li>
-                    <li class="flex items-start gap-3">
+                    <li class="flex items-start gap-2.5 sm:gap-3">
                         <span class="text-accent font-bold shrink-0">✉</span>
                         <span>info@nooralimantravels.com</span>
                     </li>
-                    <li class="flex items-start gap-3">
+                    <li class="flex items-start gap-2.5 sm:gap-3">
                         <span class="text-accent font-bold shrink-0">📍</span>
                         <span>42, Motijheel C/A,<br>Dhaka 1000, Bangladesh</span>
                     </li>
                 </ul>
             </div>
             <div>
-                <h4 class="text-footer-heading font-bold mb-4 text-base tracking-wider uppercase" data-lang-en="Follow Us" data-lang-bn="আমাদের অনুসরণ করুন">Follow Us</h4>
-                <div class="flex flex-wrap gap-2.5">
-                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 text-footer-text hover:bg-accent hover:text-charcoal hover:-translate-y-1 flex items-center justify-center font-semibold text-sm transition-all shadow-sm" aria-label="Facebook" title="Facebook">FB</a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 text-footer-text hover:bg-accent hover:text-charcoal hover:-translate-y-1 flex items-center justify-center font-semibold text-sm transition-all shadow-sm" aria-label="YouTube" title="YouTube">YT</a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 text-footer-text hover:bg-accent hover:text-charcoal hover:-translate-y-1 flex items-center justify-center font-semibold text-sm transition-all shadow-sm" aria-label="Instagram" title="Instagram">IG</a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 text-footer-text hover:bg-accent hover:text-charcoal hover:-translate-y-1 flex items-center justify-center font-semibold text-sm transition-all shadow-sm" aria-label="WhatsApp" title="WhatsApp">WA</a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 text-footer-text hover:bg-accent hover:text-charcoal hover:-translate-y-1 flex items-center justify-center font-semibold text-sm transition-all shadow-sm" aria-label="Telegram" title="Telegram">TG</a>
+                <h4 class="text-footer-heading font-bold mb-3 sm:mb-4 text-xs sm:text-base tracking-wider uppercase" data-lang-en="Follow Us" data-lang-bn="আমাদের অনুসরণ করুন">Follow Us</h4>
+                <div class="flex flex-wrap gap-2 sm:gap-2.5">
+                    <a href="#" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 text-footer-text hover:bg-accent hover:text-charcoal hover:-translate-y-1 flex items-center justify-center font-semibold text-xs sm:text-sm transition-all shadow-sm" aria-label="Facebook" title="Facebook">FB</a>
+                    <a href="#" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 text-footer-text hover:bg-accent hover:text-charcoal hover:-translate-y-1 flex items-center justify-center font-semibold text-xs sm:text-sm transition-all shadow-sm" aria-label="YouTube" title="YouTube">YT</a>
+                    <a href="#" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 text-footer-text hover:bg-accent hover:text-charcoal hover:-translate-y-1 flex items-center justify-center font-semibold text-xs sm:text-sm transition-all shadow-sm" aria-label="Instagram" title="Instagram">IG</a>
+                    <a href="#" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 text-footer-text hover:bg-accent hover:text-charcoal hover:-translate-y-1 flex items-center justify-center font-semibold text-xs sm:text-sm transition-all shadow-sm" aria-label="WhatsApp" title="WhatsApp">WA</a>
+                    <a href="#" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 text-footer-text hover:bg-accent hover:text-charcoal hover:-translate-y-1 flex items-center justify-center font-semibold text-xs sm:text-sm transition-all shadow-sm" aria-label="Telegram" title="Telegram">TG</a>
                 </div>
             </div>
         </div>
-        <div class="border-t border-white/10 py-4 text-center text-xs opacity-70">
-            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="border-t border-white/10 py-3.5 sm:py-4 text-center text-[11px] sm:text-xs opacity-70">
+            <div class="max-w-[1280px] mx-auto px-3 sm:px-6 lg:px-8">
                 <p>&copy; <span id="copyrightYear">2026</span> Noor Al-Iman Travels.
                     <span data-lang-en=" All rights reserved. Designed with devotion." data-lang-bn=" সর্বস্বত্ব সংরক্ষিত। নিষ্ঠার সাথে ডিজাইন করা।">
                         All rights reserved. Designed with devotion.

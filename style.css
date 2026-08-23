@@ -41,12 +41,12 @@
 @media (max-width: 767px) {
     .navbar__nav {
         position: fixed;
-        top: 72px;
+        top: 64px;
         left: 0;
         right: 0;
         background-color: #ffffff;
         flex-direction: column;
-        padding: 1.5rem;
+        padding: 1.25rem 1.5rem;
         gap: 1rem;
         box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
         transform: translateY(-120%);
@@ -60,6 +60,12 @@
         display: flex !important;
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+    .navbar__nav {
+        top: 72px;
     }
 }
 
@@ -105,4 +111,84 @@
 .package-grid.fade-out {
     opacity: 0;
     transform: translateY(10px);
+}
+
+/* ==================== EXTRA SMALL & 320px DEVICE OPTIMIZATIONS ==================== */
+@media (max-width: 479px) {
+    /* Touch target area optimization */
+    button, a, input, select {
+        touch-action: manipulation;
+    }
+
+    /* Prevent layout shifting on date picker */
+    input[type="date"] {
+        min-height: 40px;
+    }
+
+    /* Smooth rounded cards on mobile */
+    .package-card {
+        border-radius: 1rem;
+    }
+}
+
+/* 320px and ultra-small screen tuning (< 360px) */
+@media (max-width: 359px) {
+    html, body {
+        overflow-x: hidden !important;
+    }
+
+    .site-header {
+        height: 60px !important;
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+
+    .navbar__nav {
+        top: 60px !important;
+        padding: 1rem 0.75rem !important;
+        gap: 0.75rem !important;
+    }
+
+    .lang-switcher {
+        padding: 2px !important;
+        gap: 2px !important;
+    }
+
+    .lang-switcher__option {
+        font-size: 10px !important;
+        padding: 3px 6px !important;
+    }
+
+    .package-tab {
+        padding: 8px 10px !important;
+        font-size: 11px !important;
+        letter-spacing: normal !important;
+    }
+
+    .package-card {
+        padding: 0.85rem !important;
+    }
+
+    /* Price and Book button stack neatly on 320px screens */
+    .package-card .border-t {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.5rem !important;
+        text-align: center;
+    }
+
+    .package-card .border-t a {
+        width: 100% !important;
+    }
+
+    /* Input elements compact fitting */
+    input, select {
+        font-size: 11px !important;
+        padding: 8px 10px !important;
+    }
+
+    input[type="date"] {
+        font-size: 11px !important;
+        padding: 6px 8px !important;
+    }
 }
