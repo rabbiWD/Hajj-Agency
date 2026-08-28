@@ -286,7 +286,9 @@
         allNavLinks.forEach(link => {
             link.classList.remove('active');
             const href = link.getAttribute('href');
-            if (href && href.replace('#', '') === currentSectionId) {
+            const targetId = href ? href.replace('#', '') : '';
+            if (targetId === currentSectionId || 
+               ((currentSectionId === 'caplan-overseas' || currentSectionId === 'caplan-international' || currentSectionId === 'services') && (targetId === 'services' || targetId === currentSectionId))) {
                 link.classList.add('active');
             }
         });
@@ -303,6 +305,133 @@
 
     window.addEventListener('scroll', updateActiveNavOnScroll, { passive: true });
     updateActiveNavOnScroll();
+
+    // ==================== HERO CAROUSEL FUNCTIONALITY ====================
+    const heroSection = document.getElementById('heroCarouselSection');
+    const heroTrack = document.getElementById('heroCarouselTrack');
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    const heroDots = document.querySelectorAll('.hero-dot');
+    const heroPrevBtn = document.getElementById('heroPrevBtn');
+    const heroNextBtn = document.getElementById('heroNextBtn');
+
+    if (heroSection && heroSlides.length > 0) {
+        let currentSlide = 0;
+        let slideInterval = null;
+        const autoRotateDelay = 5000; // 5 seconds interval
+
+        function showSlide(index) {
+            if (index < 0) {
+                currentSlide = heroSlides.length - 1;
+            } else if (index >= heroSlides.length) {
+                currentSlide = 0;
+            } else {
+                currentSlide = index;
+            }
+
+            // Perform smooth horizontal slide transform
+            if (heroTrack) {
+                heroTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
+
+            heroSlides.forEach((slide, idx) => {
+                if (idx === currentSlide) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+
+            heroDots.forEach((dot, idx) => {
+                if (idx === currentSlide) {
+                    dot.classList.add('active');
+                    dot.setAttribute('aria-selected', 'true');
+                } else {
+                    dot.classList.remove('active');
+                    dot.setAttribute('aria-selected', 'false');
+                }
+            });
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        function startAutoRotate() {
+            stopAutoRotate();
+            slideInterval = setInterval(nextSlide, autoRotateDelay);
+        }
+
+        function stopAutoRotate() {
+            if (slideInterval) {
+                clearInterval(slideInterval);
+                slideInterval = null;
+            }
+        }
+
+        function resetAutoRotate() {
+            stopAutoRotate();
+            startAutoRotate();
+        }
+
+        if (heroNextBtn) {
+            heroNextBtn.addEventListener('click', () => {
+                nextSlide();
+                resetAutoRotate();
+            });
+        }
+
+        if (heroPrevBtn) {
+            heroPrevBtn.addEventListener('click', () => {
+                prevSlide();
+                resetAutoRotate();
+            });
+        }
+
+        heroDots.forEach(dot => {
+            dot.addEventListener('click', function() {
+                const targetIndex = parseInt(this.getAttribute('data-slide-to'), 10);
+                if (!isNaN(targetIndex)) {
+                    showSlide(targetIndex);
+                    resetAutoRotate();
+                }
+            });
+        });
+
+        // Pause auto rotation on hover
+        heroSection.addEventListener('mouseenter', stopAutoRotate);
+        heroSection.addEventListener('mouseleave', startAutoRotate);
+
+        // Touch swipe support for mobile devices
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        heroSection.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            stopAutoRotate();
+        }, { passive: true });
+
+        heroSection.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+            startAutoRotate();
+        }, { passive: true });
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            if (touchEndX < touchStartX - swipeThreshold) {
+                nextSlide();
+            } else if (touchEndX > touchStartX + swipeThreshold) {
+                prevSlide();
+            }
+        }
+
+        // Start auto rotation initially
+        startAutoRotate();
+    }
 
     // ==================== INITIALIZATION LOG ====================
     console.log('%c🕋 Noor Al-Iman Travels %cReady',
