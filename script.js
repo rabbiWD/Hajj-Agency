@@ -317,7 +317,7 @@
     if (heroSection && heroSlides.length > 0) {
         let currentSlide = 0;
         let slideInterval = null;
-        const autoRotateDelay = 5000; // 5 seconds interval
+        const autoRotateDelay = 7000; // 7 seconds interval (slower rotation)
 
         function showSlide(index) {
             if (index < 0) {
