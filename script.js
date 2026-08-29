@@ -433,6 +433,126 @@
         startAutoRotate();
     }
 
+    // ==================== CAPLAN INTERNATIONAL CAROUSEL FUNCTIONALITY ====================
+    const caplanSection = document.getElementById('caplanCarouselSection');
+    const caplanTrack = document.getElementById('caplanCarouselTrack');
+    const caplanSlides = document.querySelectorAll('.caplan-slide');
+    const caplanDots = document.querySelectorAll('.caplan-dot');
+    const caplanPrevBtn = document.getElementById('caplanPrevBtn');
+    const caplanNextBtn = document.getElementById('caplanNextBtn');
+
+    if (caplanSection && caplanSlides.length > 0) {
+        let currentCaplanSlide = 0;
+        let caplanInterval = null;
+        const caplanAutoRotateDelay = 7000; // 7 seconds interval
+
+        function showCaplanSlide(index) {
+            if (index < 0) {
+                currentCaplanSlide = caplanSlides.length - 1;
+            } else if (index >= caplanSlides.length) {
+                currentCaplanSlide = 0;
+            } else {
+                currentCaplanSlide = index;
+            }
+
+            if (caplanTrack) {
+                caplanTrack.style.transform = `translateX(-${currentCaplanSlide * 100}%)`;
+            }
+
+            caplanSlides.forEach((slide, idx) => {
+                if (idx === currentCaplanSlide) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+
+            caplanDots.forEach((dot, idx) => {
+                if (idx === currentCaplanSlide) {
+                    dot.classList.add('active');
+                    dot.setAttribute('aria-selected', 'true');
+                } else {
+                    dot.classList.remove('active');
+                    dot.setAttribute('aria-selected', 'false');
+                }
+            });
+        }
+
+        function nextCaplanSlide() {
+            showCaplanSlide(currentCaplanSlide + 1);
+        }
+
+        function prevCaplanSlide() {
+            showCaplanSlide(currentCaplanSlide - 1);
+        }
+
+        function startCaplanAutoRotate() {
+            stopCaplanAutoRotate();
+            caplanInterval = setInterval(nextCaplanSlide, caplanAutoRotateDelay);
+        }
+
+        function stopCaplanAutoRotate() {
+            if (caplanInterval) {
+                clearInterval(caplanInterval);
+                caplanInterval = null;
+            }
+        }
+
+        function resetCaplanAutoRotate() {
+            stopCaplanAutoRotate();
+            startCaplanAutoRotate();
+        }
+
+        if (caplanNextBtn) {
+            caplanNextBtn.addEventListener('click', () => {
+                nextCaplanSlide();
+                resetCaplanAutoRotate();
+            });
+        }
+
+        if (caplanPrevBtn) {
+            caplanPrevBtn.addEventListener('click', () => {
+                prevCaplanSlide();
+                resetCaplanAutoRotate();
+            });
+        }
+
+        caplanDots.forEach(dot => {
+            dot.addEventListener('click', function() {
+                const targetIndex = parseInt(this.getAttribute('data-slide-to'), 10);
+                if (!isNaN(targetIndex)) {
+                    showCaplanSlide(targetIndex);
+                    resetCaplanAutoRotate();
+                }
+            });
+        });
+
+        // Pause auto rotation on hover
+        caplanSection.addEventListener('mouseenter', stopCaplanAutoRotate);
+        caplanSection.addEventListener('mouseleave', startCaplanAutoRotate);
+
+        // Touch swipe support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        caplanSection.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            stopCaplanAutoRotate();
+        }, { passive: true });
+
+        caplanSection.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            if (touchEndX < touchStartX - 50) {
+                nextCaplanSlide();
+            } else if (touchEndX > touchStartX + 50) {
+                prevCaplanSlide();
+            }
+            startCaplanAutoRotate();
+        }, { passive: true });
+
+        startCaplanAutoRotate();
+    }
+
     // ==================== INITIALIZATION LOG ====================
     console.log('%c🕋 Noor Al-Iman Travels %cReady',
         'font-weight:bold;color:#0B5345;font-size:1.1rem;',

@@ -248,3 +248,27 @@
 .hero-carousel-btn:hover {
     box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
 }
+
+/* ==================== CAPLAN INTERNATIONAL CAROUSEL STYLES ==================== */
+.caplan-carousel-track {
+    will-change: transform;
+    transition: transform 1200ms cubic-bezier(0.25, 1, 0.4, 1);
+}
+
+.caplan-slide {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.caplan-dot.active {
+    background-color: #F59E0B !important;
+    width: 1.75rem !important;
+    border-radius: 9999px !important;
+    box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+}
+
+.caplan-carousel-btn:hover {
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+}
